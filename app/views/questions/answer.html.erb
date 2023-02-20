@@ -1,0 +1,14 @@
+<h1>Our answer view 🚀</h1>
+<form action="answer" data-turbo="false" >
+  <input type="text" name="formulaire" class="form-control" >
+  <input type="submit" value="Ask!" class="btn btn-primary">
+</form>
+
+<ul>
+    <li class="alert alert-light">You asked me : "<%=@user_input %>"</li>
+    <li class="alert alert-warning"><%=@robot_answer %></li>
+</ul>
+
+<button  type="button" id="liveAlertBtn">
+<%= link_to 'Reset discussion', ask_path %>
+</button>
